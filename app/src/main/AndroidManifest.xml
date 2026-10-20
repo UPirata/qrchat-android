@@ -127,6 +127,19 @@
                 <category android:name="android.intent.category.BROWSABLE" />
                 <data android:scheme="bitchat" android:host="verify" />
             </intent-filter>
+            <!-- QRchat zone links: open a geohash location channel -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="qrchat" android:host="zona" />
+            </intent-filter>
+            <intent-filter android:autoVerify="false">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="https" android:host="qradio.grok.me" android:pathPrefix="/c/" />
+            </intent-filter>
         </activity>
 
         <!-- Persistent foreground service to run the mesh in background -->

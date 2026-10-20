@@ -705,6 +705,7 @@ class MainActivity : OrientationAwareActivity() {
                 // Handle any notification intent
                 handleNotificationIntent(intent)
                 handleVerificationIntent(intent)
+                handleZoneIntent(intent)
 
                 // Small delay to ensure mesh service is fully initialized
                 delay(500)
@@ -734,6 +735,7 @@ class MainActivity : OrientationAwareActivity() {
         if (mainViewModel.onboardingState.value == OnboardingState.COMPLETE) {
             handleNotificationIntent(intent)
             handleVerificationIntent(intent)
+            handleZoneIntent(intent)
         }
     }
 
@@ -846,6 +848,30 @@ class MainActivity : OrientationAwareActivity() {
                 }
             }
         }
+    }
+
+    private var lastHandledZoneIntent: Intent? = null
+
+    /** Opens a geohash location channel from qrchat://zona/<gh> or https://qradio.grok.me/c/<gh>. */
+    private fun handleZoneIntent(intent: Intent) {
+        val raw = intent.data?.toString() ?: return
+        if (!com.bitchat.android.deeplink.ZoneDeepLink.isZoneLink(raw)) return
+        if (intent === lastHandledZoneIntent) return
+        lastHandledZoneIntent = intent
+        val link = com.bitchat.android.deeplink.ZoneDeepLink.parse(raw)
+        val channel = link?.let { com.bitchat.android.ui.channelForManualGeohash(it.geohash) }
+        if (link == null || channel == null) {
+            android.widget.Toast.makeText(this, getString(R.string.deeplink_invalid_zone), android.widget.Toast.LENGTH_LONG).show()
+            return
+        }
+        // Same path as manual geohash entry (teleport): works without location permission.
+        LocationChannelManager.getInstance(applicationContext).selectManual(channel)
+        val msg = if (link.venueName != null) {
+            getString(R.string.deeplink_opened_venue, link.venueName, link.geohash)
+        } else {
+            getString(R.string.deeplink_opened_zone, link.geohash)
+        }
+        android.widget.Toast.makeText(this, msg, android.widget.Toast.LENGTH_LONG).show()
     }
 
     private fun handleVerificationIntent(intent: Intent) {

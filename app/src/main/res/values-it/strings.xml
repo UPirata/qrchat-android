@@ -743,4 +743,7 @@
     <string name="verify_scan">Scansiona</string>
     <string name="notif_sent_image">📷 ha inviato un\'immagine</string>
     <string name="notif_sent_voice">🎤 ha inviato un messaggio vocale</string>
+    <string name="deeplink_opened_venue">Benvenuto da %1$s! Canale #%2$s</string>
+    <string name="deeplink_opened_zone">Aperto il canale #%1$s</string>
+    <string name="deeplink_invalid_zone">Link di zona QRchat non valido</string>
 </resources>

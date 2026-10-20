@@ -678,4 +678,7 @@
         <item quantity="one">1 person</item>
         <item quantity="other">%d persona</item>
     </plurals>
+    <string name="deeplink_opened_venue">Mirë se erdhe te %1$s! Kanali #%2$s</string>
+    <string name="deeplink_opened_zone">U hap kanali #%1$s</string>
+    <string name="deeplink_invalid_zone">Lidhje zone QRchat e pavlefshme</string>
 </resources>

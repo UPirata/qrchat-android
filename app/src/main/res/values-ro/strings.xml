@@ -681,4 +681,7 @@
         <item quantity="few">%d persoane</item>
         <item quantity="other">%d de persoane</item>
     </plurals>
+    <string name="deeplink_opened_venue">Bine ai venit la %1$s! Canalul #%2$s</string>
+    <string name="deeplink_opened_zone">Canalul #%1$s a fost deschis</string>
+    <string name="deeplink_invalid_zone">Link de zonă QRchat invalid</string>
 </resources>
