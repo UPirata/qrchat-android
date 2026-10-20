@@ -766,4 +766,11 @@
     <string name="cmd_arg_pay">&lt;token&gt; [public]</string>
     <string name="cmd_arg_password">[password]</string>
     <string name="onb_perms_revoked">Some permissions were revoked. Please grant all permissions to continue.</string>
+    <string name="voice_live_ptt_title">Live push-to-talk</string>
+    <string name="voice_live_ptt_desc">Play voice bursts live on the mesh; voice notes are always sent on release</string>
+    <string name="voice_cancel_recording">Cancel recording</string>
+    <string name="verify_my_qr">My QR</string>
+    <string name="verify_scan">Scan</string>
+    <string name="notif_sent_image">📷 sent an image</string>
+    <string name="notif_sent_voice">🎤 sent a voice message</string>
 </resources>

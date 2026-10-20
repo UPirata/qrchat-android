@@ -762,7 +762,7 @@ private fun RecordingCancelButton(
         ) {
             Icon(
                 imageVector = Icons.Filled.Close,
-                contentDescription = "Cancel recording",
+                contentDescription = androidx.compose.ui.res.stringResource(com.bitchat.android.R.string.voice_cancel_recording),
                 tint = tint,
                 modifier = Modifier.size(ComposerIconSize)
             )

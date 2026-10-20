@@ -142,7 +142,7 @@ fun VerificationSheet(
                     onClick = { selectedTab = 0 },
                     text = {
                         Text(
-                            text = "My QR",
+                            text = androidx.compose.ui.res.stringResource(com.bitchat.android.R.string.verify_my_qr),
                             fontFamily = BitchatFontFamily,
                             fontSize = 14.sp
                         )
@@ -153,7 +153,7 @@ fun VerificationSheet(
                     onClick = { selectedTab = 1 },
                     text = {
                         Text(
-                            text = "Scan",
+                            text = androidx.compose.ui.res.stringResource(com.bitchat.android.R.string.verify_scan),
                             fontFamily = BitchatFontFamily,
                             fontSize = 14.sp
                         )

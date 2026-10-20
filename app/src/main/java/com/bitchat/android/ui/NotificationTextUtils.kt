@@ -18,8 +18,8 @@ object NotificationTextUtils {
     fun buildPrivateMessagePreview(message: BitchatMessage): String {
         return try {
             when (message.type) {
-                BitchatMessageType.Image -> "📷 sent an image"
-                BitchatMessageType.Audio -> "🎤 sent a voice message"
+                BitchatMessageType.Image -> com.bitchat.android.util.AppStrings.get(com.bitchat.android.R.string.notif_sent_image, "📷 sent an image")
+                BitchatMessageType.Audio -> com.bitchat.android.util.AppStrings.get(com.bitchat.android.R.string.notif_sent_voice, "🎤 sent a voice message")
                 BitchatMessageType.File -> {
                     // Show just the filename (not the full path)
                     val name = try { java.io.File(message.content).name } catch (_: Exception) { null }

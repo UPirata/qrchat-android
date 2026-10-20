@@ -552,8 +552,8 @@ fun AboutSheet(
 
                                     SettingsToggleRow(
                                         icon = Icons.Filled.Mic,
-                                        title = "Live push-to-talk",
-                                        subtitle = "Play voice bursts live on the mesh; voice notes are always sent on release",
+                                        title = androidx.compose.ui.res.stringResource(com.bitchat.android.R.string.voice_live_ptt_title),
+                                        subtitle = androidx.compose.ui.res.stringResource(com.bitchat.android.R.string.voice_live_ptt_desc),
                                         checked = liveVoiceEnabled,
                                         onCheckedChange = { enabled ->
                                             liveVoiceEnabled = enabled
