@@ -12,6 +12,7 @@ class BitchatApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
+        com.bitchat.android.util.AppStrings.init(this)
 
         // Start the single process-wide power policy before transport components are constructed.
         com.bitchat.android.mesh.PowerManager.getInstance(this).start()

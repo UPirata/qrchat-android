@@ -275,17 +275,17 @@ class NostrDirectMessageHandler(
                 ?: senderNickname
             val guidance = if (control.isFavorite) {
                 if (relationship?.isFavorite == true) {
-                    " - mutual! You can continue DMs via Nostr when out of mesh."
+                    com.bitchat.android.util.AppStrings.get(com.bitchat.android.R.string.sys_fav_mutual, " - mutual! You can continue DMs via Nostr when out of mesh.")
                 } else {
-                    " - favorite back to continue DMs later."
+                    com.bitchat.android.util.AppStrings.get(com.bitchat.android.R.string.sys_fav_back, " - favorite back to continue DMs later.")
                 }
             } else {
-                ". DMs over Nostr will pause unless you both favorite again."
+                com.bitchat.android.util.AppStrings.get(com.bitchat.android.R.string.sys_fav_pause, ". DMs over Nostr will pause unless you both favorite again.")
             }
             val action = if (control.isFavorite) "favorited" else "unfavorited"
             val systemMessage = BitchatMessage(
                 sender = "system",
-                content = "$displayName $action you$guidance",
+                content = (if (control.isFavorite) com.bitchat.android.util.AppStrings.get(com.bitchat.android.R.string.sys_favorited_you, "%1\$s added you to favorites", displayName) else com.bitchat.android.util.AppStrings.get(com.bitchat.android.R.string.sys_unfavorited_you, "%1\$s removed you from favorites", displayName)) + guidance,
                 timestamp = timestamp,
                 isRelay = false,
                 isPrivate = true,
