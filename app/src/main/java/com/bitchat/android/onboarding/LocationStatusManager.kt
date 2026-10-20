@@ -171,7 +171,7 @@ class LocationStatusManager(
             }
             LocationStatus.NOT_AVAILABLE -> {
                 Log.e(TAG, "Location services not available")
-                onLocationDisabled("Location services are not available on this device.")
+                onLocationDisabled(com.bitchat.android.util.AppStrings.get(com.bitchat.android.R.string.onb_loc_not_available, "Location services are not available on this device."))
             }
         }
     }

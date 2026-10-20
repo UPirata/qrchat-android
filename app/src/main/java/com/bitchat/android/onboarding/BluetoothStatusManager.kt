@@ -61,7 +61,7 @@ class BluetoothStatusManager(
             if (isEnabled) {
                 onBluetoothEnabled()
             } else {
-                onBluetoothDisabled("Bluetooth is required for bitchat to discover and connect to nearby users. Please enable Bluetooth to continue.")
+                onBluetoothDisabled(com.bitchat.android.util.AppStrings.get(com.bitchat.android.R.string.onb_bt_required, "Bluetooth is required for QRchat to discover and connect to nearby users. Please enable Bluetooth to continue."))
             }
         }
     }
@@ -146,7 +146,7 @@ class BluetoothStatusManager(
             }
             BluetoothStatus.NOT_SUPPORTED -> {
                 Log.e(TAG, "Bluetooth not supported")
-                onBluetoothDisabled("This device doesn't support Bluetooth, which is required for bitchat to function.")
+                onBluetoothDisabled(com.bitchat.android.util.AppStrings.get(com.bitchat.android.R.string.onb_bt_not_supported, "This device doesn't support Bluetooth, which is required for QRchat to function."))
             }
         }
     }

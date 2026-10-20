@@ -20,15 +20,15 @@ class CommandProcessor(
     
     // Available commands list
     private val baseCommands = listOf(
-        CommandSuggestion("/block", emptyList(), "[nickname]", com.bitchat.android.util.AppStrings.get(com.bitchat.android.R.string.cmd_desc_block, "block or list blocked peers")),
+        CommandSuggestion("/block", emptyList(), com.bitchat.android.util.AppStrings.get(com.bitchat.android.R.string.cmd_arg_nickname_opt, "[nickname]"), com.bitchat.android.util.AppStrings.get(com.bitchat.android.R.string.cmd_desc_block, "block or list blocked peers")),
         CommandSuggestion("/channels", emptyList(), null, com.bitchat.android.util.AppStrings.get(com.bitchat.android.R.string.cmd_desc_channels, "show all discovered channels")),
         CommandSuggestion("/clear", emptyList(), null, com.bitchat.android.util.AppStrings.get(com.bitchat.android.R.string.cmd_desc_clear, "clear chat messages")),
-        CommandSuggestion("/hug", emptyList(), "<nickname>", com.bitchat.android.util.AppStrings.get(com.bitchat.android.R.string.cmd_desc_hug, "send someone a warm hug")),
-        CommandSuggestion("/j", listOf("/join"), "<channel>", com.bitchat.android.util.AppStrings.get(com.bitchat.android.R.string.cmd_desc_join, "join or create a channel")),
-        CommandSuggestion("/m", listOf("/msg"), "<nickname> [message]", com.bitchat.android.util.AppStrings.get(com.bitchat.android.R.string.cmd_desc_msg, "send private message")),
-        CommandSuggestion("/pay", emptyList(), "<token> [public]", com.bitchat.android.util.AppStrings.get(com.bitchat.android.R.string.cmd_desc_pay, "send a Cashu ecash token")),
-        CommandSuggestion("/slap", emptyList(), "<nickname>", com.bitchat.android.util.AppStrings.get(com.bitchat.android.R.string.cmd_desc_slap, "slap someone with a trout")),
-        CommandSuggestion("/unblock", emptyList(), "<nickname>", com.bitchat.android.util.AppStrings.get(com.bitchat.android.R.string.cmd_desc_unblock, "unblock a peer")),
+        CommandSuggestion("/hug", emptyList(), com.bitchat.android.util.AppStrings.get(com.bitchat.android.R.string.cmd_arg_nickname, "<nickname>"), com.bitchat.android.util.AppStrings.get(com.bitchat.android.R.string.cmd_desc_hug, "send someone a warm hug")),
+        CommandSuggestion("/j", listOf("/join"), com.bitchat.android.util.AppStrings.get(com.bitchat.android.R.string.cmd_arg_channel, "<channel>"), com.bitchat.android.util.AppStrings.get(com.bitchat.android.R.string.cmd_desc_join, "join or create a channel")),
+        CommandSuggestion("/m", listOf("/msg"), com.bitchat.android.util.AppStrings.get(com.bitchat.android.R.string.cmd_arg_msg, "<nickname> [message]"), com.bitchat.android.util.AppStrings.get(com.bitchat.android.R.string.cmd_desc_msg, "send private message")),
+        CommandSuggestion("/pay", emptyList(), com.bitchat.android.util.AppStrings.get(com.bitchat.android.R.string.cmd_arg_pay, "<token> [public]"), com.bitchat.android.util.AppStrings.get(com.bitchat.android.R.string.cmd_desc_pay, "send a Cashu ecash token")),
+        CommandSuggestion("/slap", emptyList(), com.bitchat.android.util.AppStrings.get(com.bitchat.android.R.string.cmd_arg_nickname, "<nickname>"), com.bitchat.android.util.AppStrings.get(com.bitchat.android.R.string.cmd_desc_slap, "slap someone with a trout")),
+        CommandSuggestion("/unblock", emptyList(), com.bitchat.android.util.AppStrings.get(com.bitchat.android.R.string.cmd_arg_nickname, "<nickname>"), com.bitchat.android.util.AppStrings.get(com.bitchat.android.R.string.cmd_desc_unblock, "unblock a peer")),
         CommandSuggestion("/w", emptyList(), null, com.bitchat.android.util.AppStrings.get(com.bitchat.android.R.string.cmd_desc_who, "see who's online"))
     )
     
@@ -505,9 +505,9 @@ class CommandProcessor(
         // Add channel-specific commands if in a channel
         val channelCommands = if (state.getCurrentChannelValue() != null) {
             listOf(
-                CommandSuggestion("/pass", emptyList(), "[password]", com.bitchat.android.util.AppStrings.get(com.bitchat.android.R.string.cmd_desc_pass, "change channel password")),
+                CommandSuggestion("/pass", emptyList(), com.bitchat.android.util.AppStrings.get(com.bitchat.android.R.string.cmd_arg_password, "[password]"), com.bitchat.android.util.AppStrings.get(com.bitchat.android.R.string.cmd_desc_pass, "change channel password")),
                 CommandSuggestion("/save", emptyList(), null, com.bitchat.android.util.AppStrings.get(com.bitchat.android.R.string.cmd_desc_save, "save channel messages locally")),
-                CommandSuggestion("/transfer", emptyList(), "<nickname>", com.bitchat.android.util.AppStrings.get(com.bitchat.android.R.string.cmd_desc_transfer, "transfer channel ownership"))
+                CommandSuggestion("/transfer", emptyList(), com.bitchat.android.util.AppStrings.get(com.bitchat.android.R.string.cmd_arg_nickname, "<nickname>"), com.bitchat.android.util.AppStrings.get(com.bitchat.android.R.string.cmd_desc_transfer, "transfer channel ownership"))
             )
         } else {
             emptyList()

@@ -215,11 +215,11 @@ class OnboardingCoordinator(
         
         if (deniedCritical.isNotEmpty()) {
             val message = buildString {
-                append("Critical permissions were denied. bitchat requires these permissions to function:\n")
+                append(com.bitchat.android.util.AppStrings.get(com.bitchat.android.R.string.onb_critical_denied, "Critical permissions were denied. QRchat requires these permissions to function:") + "\n")
                 deniedCritical.keys.forEach { permission ->
                     append("- ${getPermissionDisplayName(permission)}\n")
                 }
-                append("\nPlease grant these permissions in Settings to use bitchat.")
+                append("\n" + com.bitchat.android.util.AppStrings.get(com.bitchat.android.R.string.onb_grant_in_settings, "Please grant these permissions in Settings to use QRchat."))
             }
             
             Log.e(TAG, "Critical permissions denied: $deniedCritical")
@@ -270,11 +270,11 @@ class OnboardingCoordinator(
      */
     private fun getPermissionDisplayName(permission: String): String {
         return when {
-            permission.contains("BLUETOOTH") -> "Bluetooth/Nearby Devices"
-            permission.contains("BACKGROUND") -> "Background Location"
-            permission.contains("LOCATION") -> "Location (for Bluetooth scanning)"
-            permission.contains("NEARBY_WIFI") -> "Nearby Wi‑Fi Devices (for Wi‑Fi Aware)"
-            permission.contains("NOTIFICATION") -> "Notifications"
+            permission.contains("BLUETOOTH") -> com.bitchat.android.util.AppStrings.get(com.bitchat.android.R.string.onb_perm_bluetooth, "Bluetooth/Nearby Devices")
+            permission.contains("BACKGROUND") -> com.bitchat.android.util.AppStrings.get(com.bitchat.android.R.string.perm_type_background_location, "Background Location")
+            permission.contains("LOCATION") -> com.bitchat.android.util.AppStrings.get(com.bitchat.android.R.string.onb_perm_location, "Location (for Bluetooth scanning)")
+            permission.contains("NEARBY_WIFI") -> com.bitchat.android.util.AppStrings.get(com.bitchat.android.R.string.onb_perm_wifi, "Nearby Wi-Fi Devices (for Wi-Fi Aware)")
+            permission.contains("NOTIFICATION") -> com.bitchat.android.util.AppStrings.get(com.bitchat.android.R.string.perm_type_notifications, "Notifications")
             else -> permission.substringAfterLast(".")
         }
     }

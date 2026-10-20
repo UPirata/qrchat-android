@@ -693,7 +693,7 @@ class MainActivity : OrientationAwareActivity() {
                 if (!permissionManager.areAllPermissionsGranted()) {
                     val missing = permissionManager.getMissingPermissions()
                     Log.w("MainActivity", "Permissions revoked during initialization: $missing")
-                    handleOnboardingFailed("Some permissions were revoked. Please grant all permissions to continue.")
+                    handleOnboardingFailed(getString(R.string.onb_perms_revoked))
                     return@launch
                 }
 

@@ -748,4 +748,22 @@
     <string name="ln_unavail">Location Unavailable</string>
     <string name="ln_perm">Location permission is required for notes</string>
     <string name="ln_enable">Enable Location</string>
+    <string name="perm_wifi_aware_desc">Enable Wi-Fi Aware to discover and connect to nearby QRchat users over Wi-Fi.</string>
+    <string name="perm_wifi_aware_system">Allow QRchat to discover nearby Wi-Fi devices</string>
+    <string name="perm_type_wifi_aware">Wi-Fi Aware</string>
+    <string name="onb_critical_denied">Critical permissions were denied. QRchat requires these permissions to function:</string>
+    <string name="onb_grant_in_settings">Please grant these permissions in Settings to use QRchat.</string>
+    <string name="onb_perm_bluetooth">Bluetooth/Nearby Devices</string>
+    <string name="onb_perm_location">Location (for Bluetooth scanning)</string>
+    <string name="onb_perm_wifi">Nearby Wi-Fi Devices (for Wi-Fi Aware)</string>
+    <string name="onb_bt_not_supported">This device doesn\'t support Bluetooth, which is required for QRchat to function.</string>
+    <string name="onb_bt_required">Bluetooth is required for QRchat to discover and connect to nearby users. Please enable Bluetooth to continue.</string>
+    <string name="onb_loc_not_available">Location services are not available on this device.</string>
+    <string name="cmd_arg_nickname_opt">[nickname]</string>
+    <string name="cmd_arg_nickname">&lt;nickname&gt;</string>
+    <string name="cmd_arg_channel">&lt;channel&gt;</string>
+    <string name="cmd_arg_msg">&lt;nickname&gt; [message]</string>
+    <string name="cmd_arg_pay">&lt;token&gt; [public]</string>
+    <string name="cmd_arg_password">[password]</string>
+    <string name="onb_perms_revoked">Some permissions were revoked. Please grant all permissions to continue.</string>
 </resources>

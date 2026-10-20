@@ -718,4 +718,22 @@
     <string name="tor_not_available_in_this_build">Tor non disponibile in questa build</string>
     <string name="checking">Verifica in corso...</string>
     <string name="apk_not_ready_please_prepare_it_first">APK non pronto. Preparalo prima.</string>
+    <string name="perm_wifi_aware_desc">Attiva Wi-Fi Aware per trovare e collegarti agli utenti QRchat vicini tramite Wi-Fi.</string>
+    <string name="perm_wifi_aware_system">Consenti a QRchat di trovare dispositivi Wi-Fi vicini</string>
+    <string name="perm_type_wifi_aware">Wi-Fi Aware</string>
+    <string name="onb_critical_denied">Alcune autorizzazioni essenziali sono state negate. QRchat ne ha bisogno per funzionare:</string>
+    <string name="onb_grant_in_settings">Concedi queste autorizzazioni nelle Impostazioni per usare QRchat.</string>
+    <string name="onb_perm_bluetooth">Bluetooth/Dispositivi vicini</string>
+    <string name="onb_perm_location">Posizione (per la scansione Bluetooth)</string>
+    <string name="onb_perm_wifi">Dispositivi Wi-Fi vicini (per Wi-Fi Aware)</string>
+    <string name="onb_bt_not_supported">Questo dispositivo non supporta il Bluetooth, necessario per il funzionamento di QRchat.</string>
+    <string name="onb_bt_required">QRchat ha bisogno del Bluetooth per trovare gli utenti vicini e collegarsi. Attiva il Bluetooth per continuare.</string>
+    <string name="onb_loc_not_available">I servizi di posizione non sono disponibili su questo dispositivo.</string>
+    <string name="cmd_arg_nickname_opt">[nickname]</string>
+    <string name="cmd_arg_nickname">&lt;nickname&gt;</string>
+    <string name="cmd_arg_channel">&lt;canale&gt;</string>
+    <string name="cmd_arg_msg">&lt;nickname&gt; [messaggio]</string>
+    <string name="cmd_arg_pay">&lt;token&gt; [public]</string>
+    <string name="cmd_arg_password">[password]</string>
+    <string name="onb_perms_revoked">Alcune autorizzazioni sono state revocate. Concedile tutte per continuare.</string>
 </resources>
